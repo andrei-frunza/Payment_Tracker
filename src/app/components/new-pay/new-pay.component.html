@@ -1,0 +1,53 @@
+<mat-card>
+    <mat-card-header>
+        <mat-card-title>New Payment</mat-card-title>
+        <mat-card-subtitle>Enter a new payement you received into the database</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+
+        <mat-form-field class="input" appearance="fill">
+            <mat-label>Label for Payment</mat-label>
+            <input  matInput [formControl]="label">
+        </mat-form-field>
+
+        <mat-form-field appearance="fill" class="smallIn">
+            <mat-label>Date Payment was Received</mat-label>
+            <input matInput [matDatepicker]="picker" [(ngModel)]="date" required>
+            <mat-hint>MM/DD/YYYY</mat-hint>
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+          </mat-form-field>
+
+          <span class="spacer">&nbsp;</span>
+
+          <mat-form-field appearance="fill" class="smallIn">
+            <mat-label>Payment Amount</mat-label>
+            <input matInput [formControl]="amount">
+          </mat-form-field>
+
+          <mat-form-field appearance="fill" class="smallIn">
+            <mat-label>Tip</mat-label>
+            <input matInput [formControl]="tip">
+          </mat-form-field>
+
+          <span class="spacer">&nbsp;</span>
+
+          <mat-form-field appearance="fill" class="smallIn">
+            <mat-label>Payment Method</mat-label>
+            <mat-select [(ngModel)]="mode">
+              <mat-option value="Debit">Debit</mat-option>
+              <mat-option value="Credit">Credit</mat-option>
+              <mat-option value="Cash">Cash</mat-option>
+            </mat-select>
+            <mat-hint align="end">Here's the dropdown arrow ^</mat-hint>
+          </mat-form-field>
+
+          <div>
+            <button mat-raised-button color="primary" (click)="save()">
+            <mat-icon>save</mat-icon>
+            Save to Database
+          </button>
+          </div>
+          
+    </mat-card-content>
+</mat-card>

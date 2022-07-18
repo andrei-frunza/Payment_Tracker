@@ -1,0 +1,32 @@
+mat-form-field{
+    border-style:solid;
+    border-radius:6px;
+    border-width:1px;
+}
+.input{
+    min-width:80%;
+    margin-bottom:50px;
+}
+.smallIn{
+    min-width:35%;
+}
+.spacer{
+    min-width:10%;
+    display: inline-block;
+}
+button{
+    margin-top:20px;
+}
+@media only screen and (max-width: 865px){
+    .input{
+        min-width:80%;
+    }
+    .smallIn{
+        min-width:80%;
+        margin-bottom:50px;
+    }
+    .spacer{
+        min-width:0;
+        display: inline-block;
+    }
+}

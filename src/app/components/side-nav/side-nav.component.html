@@ -1,0 +1,41 @@
+<mat-sidenav-container class="app-sidenav-container" autosize>
+    <mat-sidenav #sidenav class="app-sidenav mat-elevation-z10" [mode]="isScreenSmall ? 'over' : 'side'" [opened]="!isScreenSmall" >
+     
+      <mat-nav-list>
+
+        <a [routerLink]="['/in/inc']">
+          <mat-list-item>
+            <mat-icon>account_balance</mat-icon>
+            <h1>My Income</h1>
+          </mat-list-item>
+        </a>
+
+        <a [routerLink]="['/in/add']">
+          <mat-list-item>
+            <mat-icon>add</mat-icon>
+            <h1>Add New Payment</h1>
+          </mat-list-item> 
+        </a>
+        
+        <a (click)=signOut()>
+          <mat-list-item>
+            <mat-icon>backspace</mat-icon>
+            <h1>Sign Out</h1>
+          </mat-list-item>
+        </a>
+        
+      </mat-nav-list>
+    </mat-sidenav>
+
+    <div class="app-sidenav-content">
+        <mat-toolbar color="primary">
+            <button mat-icon-button (click)='sidenav.toggle()'><mat-icon>menu</mat-icon></button>
+            <a>Payment Tracker</a>
+        </mat-toolbar>
+        <div class="wrapper">
+          <router-outlet></router-outlet>  
+        </div>
+    </div>
+  
+  </mat-sidenav-container>
+  

@@ -1,0 +1,29 @@
+<div class="whole">
+<mat-card>
+    <mat-card-header>
+        <mat-card-title>Please Sign into your account</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+        
+        <mat-form-field appearance="fill">
+            <mat-label>Email</mat-label>
+            <input  matInput [formControl]="email" autocomplete="off" (keyup.enter)="signIn()">
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+            <mat-label>Password</mat-label>
+            <input  matInput [formControl]="pass" autocomplete="off" visibility="off" type="password" (keyup.enter)="signIn()">
+        </mat-form-field>
+
+        <button mat-raised-button color="primary" (click)="signIn()">
+            LOGIN
+            <mat-icon>arrow_forward_ios</mat-icon>
+        </button>
+     <h1>Or...</h1>
+    <button mat-raised-button color="primary" (click)="logGuest()">continue as guest</button>  
+    <p style="font-style: italic;text-align: center;">Creating and deleting entries is restricted to logged in users</p>
+    </mat-card-content>
+    
+    
+</mat-card> 
+</div>

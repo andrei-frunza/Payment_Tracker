@@ -1,0 +1,30 @@
+table {
+    width: 100%;
+  }
+.gross{
+    background-color: rgb(250, 51, 84);
+    width:100%;
+    border-radius: 6px;
+    margin-top:15px;
+    color:white;
+    font-weight: bold;
+    font-size: 25px;
+}
+.total{
+    background-color: black;
+    width:100%;
+    border-radius: 6px;
+    margin-top:15px;
+    color:white;
+    font-weight: bold;
+    font-size: 25px;
+}
+p{
+    padding: 5px;
+}
+.mat-column-amount{
+    font-weight: bold;
+}
+.mat-column-date{
+    font-style: italic;
+}
